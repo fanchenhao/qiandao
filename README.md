@@ -1,4 +1,5 @@
-# ScrollablePanel
+# Scrollabl
+
 ---
 
 A flexible view for providing a limited rect window into a large data set,just like a two-dimensional RecyclerView.
@@ -7,20 +8,22 @@ It different from RecyclerView is that it's two-dimensional(just like a Panel) a
 
 ![ScrollablePanel Demo](art/ScrollablePanelDemo.gif) 
 
-## Demo ##
+## Demo
 
 Apk Download:[ScrollablePanelDemo.apk](art/ScrollablePanelDemo.apk) 
 
-## Download ##
+## Download
 
 ```groovy
   compile 'com.kelin.scrollablepanel:library:1.2.0' 
 ```
 
-## Usage ##
+## Usage
+
 ScrollablePanel is very similar to the RecyclerView and we can use them in the same way.
 
 ####1、Initialize ScrollablePanel
+
 ```xml
 <com.kelin.scrollablepanel.library.ScrollablePanel
         android:id="@+id/scrollable_panel"
@@ -31,7 +34,8 @@ ScrollablePanel is very similar to the RecyclerView and we can use them in the s
 ####2、Adapter
 
 This adapter must extend a class called PanelAdapter,We now have to override following methods so that we can implement our logic.
-```java 
+
+```java
 public class TestPanelAdapter extends PanelAdapter {
     private List<List<String>> data;
 
@@ -73,7 +77,9 @@ public class TestPanelAdapter extends PanelAdapter {
     }
 }
 ```
+
 ####3、Set Adapter
+
 ```java
 @Override
 protected void onCreate(Bundle savedInstanceState) {
@@ -85,27 +91,28 @@ protected void onCreate(Bundle savedInstanceState) {
    ...
    ...
 }
- ```
-## ChangeLog ##
+```
 
--  V1.0.1 (2016-12-01) fix header scroll bug
--  V1.1.0 (2016-12-21) fix desynchronisation between RV’s & fix dislocation of first column in every row!
--  V1.2.0 (2016-12-26)  Add notifyDataSetChanged  & Fix auto reset to original position when first time scroll down!
+## ChangeLog
+
+- V1.0.1 (2016-12-01) fix header scroll bug
+- V1.1.0 (2016-12-21) fix desynchronisation between RV’s & fix dislocation of first column in every row!
+- V1.2.0 (2016-12-26)  Add notifyDataSetChanged  & Fix auto reset to original position when first time scroll down!
 
 ## License
-   ```
-    Copyright 2016 Kelin Hong
-    
-    Licensed under the Apache License, Version 2.0 (the "License");
-    you may not use this file except in compliance with the License.
-    You may obtain a copy of the License at
-    
-       http://www.apache.org/licenses/LICENSE-2.0
-    
-    Unless required by applicable law or agreed to in writing, software
-    distributed under the License is distributed on an "AS IS" BASIS,
-    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-    See the License for the specific language governing permissions and
-    limitations under the License.
-    
-   ```
+
+```
+ Copyright 2016 Kelin Hong
+
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+```
